@@ -33,7 +33,7 @@ https.get('https://jsonplaceholder.typicode.com/posts/1', (resp) => {
 });
 
 const myModule = require('./my-module.js');
-console.log(myModule());
+console.log(myModule.myFunction());
 
 const myPromise = new Promise((resolve, reject) => {
  const condition = true;
@@ -48,3 +48,13 @@ myPromise.then((result) => {
 }).catch((error) => {
  console.log(error);
 });
+
+async function myFunction() {
+ try {
+ const result = await myPromise;
+ console.log(result);
+ } catch (error) {
+ console.log(error);
+ }
+}
+myFunction();

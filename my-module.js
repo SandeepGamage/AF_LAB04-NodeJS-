@@ -1,4 +1,5 @@
 const myFunction = () => {
-    console.log("Hello from my-module!");
+    return "Hello from my-module!";
 }
-module.exports = myFunction;
+
+module.exports = { myFunction };
